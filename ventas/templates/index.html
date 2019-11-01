@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+  {% block title %}<title>Tienda Streetwear</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://file.myfontastic.com/K2Hqyt9UZyx6J7D9gx4cYM/icons.css" rel="stylesheet">
+  </head>
+{% block content %}
+<body>
+<header>
+    <div class="contenedor">
+      <h1 class="icono-ropa">Tienda Streetwear</h1>
+      <input type="checkbox" id="menu-bar">
+      <label class="icon-menu" for="menu-bar"></label>
+    
+      <nav class="menu">
+          <li><a href="{% url 'index' %}">Tienda de ropa</a></li>
+          <li><a href="{% url 'catalogo' %}">Productos</a></li>
+          <li><a href="{% url 'crear' %}">Crear productos</a></li>
+          <li><a href="{% url 'editar' %}">Editar productos</a></li>
+      </nav>
+    </div>
+    </header>
+  
+<main>
+    <div class="slideshow">
+        <ul class="slider">
+            <li>
+                <img src="{%static 'images/im1.jpg'%}" alt="Contando Experiencias">
+                <section class="caption">
+                    <h1>Ultima Moda</h1>
+                    <p>consigue los productos recien salidos al mercado con los mejores precios</p>
+                   
+                </section>
+            </li>
+            <li>
+                <img src="{%static 'images/im2.jpg'%}" alt="Contando Experiencias">
+                <section class="caption">
+                    <h1>Zapatillas</h1>
+                    <p>encuentra una variedad de calzado juvenil o formal</p>
+                   
+                </section>
+            </li>
+            <li>
+                <img src="{%static 'images/im3.jpg'%}" alt="Contando Experiencias">
+                <section class="caption">
+                    <h1>Temporada De Invierno</h1>
+                    <p>encuentra las ultimas ofertas de la temporada de invierno</p>
+                </section>
+            </li>
+            <li>
+                <img src="{%static 'images/im4.jpg'%}" alt="Contando Experiencias">
+                <section class="caption">
+                    <h3>Trajes Formales</h3>
+                    <p>Encuentra una gran variedad de trajes de gala y smokings para ti</p>
+                </section>
+            </li>
+        </ul>
+
+    <ol class="pagination">
+            
+    </ol>
+    
+    <div class="left">
+        <span class="fa fa-chevron-left"></span>
+    </div>
+
+    <div class="right">
+        <span class="fa fa-chevron-right"></span>
+    </div>
+    </div>
+
+</section>
+
+<section class="cursos">
+        <h2 class="section__titulo">Las Mejores Ofertas</h2>
+        <div class="cursos__columna">
+            <img src="{%static 'images/im6.jpg'%}" alt="" class="cursos__img">
+            <div class="cursos__descripcion">
+                <h3 class="cursos_titulo">Camisas</h3>
+                <p class="cursos__txt">Tallas: S, M, L, XL, XXL || Precios desde 10.990$</p>
+                <p><a href="#" class="btn btn-primary" role="button">Ver</a> 
+                    <a href="#" class="btn btn-default producto" precio="13" titulo="Jackie & Ryan" role="button">Comprar</a></p>
+            </div>
+        </div>
+        <div class="cursos__columna">
+            <img src="{%static 'images/im5.jpg'%}" alt="" class="cursos__img">
+            <div class="cursos__descripcion">
+                <h3 class="cursos_titulo">Zapatillas</h3>
+                <p class="cursos__txt">Numeros: desde el 35 al 45 || Precios desde 8.990$</p>
+                <p><a href="#" class="btn btn-primary" role="button">Ver</a> 
+                    <a href="#" class="btn btn-default producto" precio="13" titulo="Jackie & Ryan" role="button">Comprar</a></p>
+            </div>
+        </div>
+        <div class="cursos__columna">
+            <img src="{%static 'images/im7.jpg'%}" alt="" class="cursos__img">
+            <div class="cursos__descripcion">
+                <h3 class="cursos_titulo">Jeans</h3>
+                <p class="cursos__txt">Tallas: S, M, L, XL, XXL || Precios desde 12.990$</p>
+                <p><a href="#" class="btn btn-primary" role="button">Ver</a> 
+                    <a href="#" class="btn btn-default producto" precio="13" titulo="Jackie & Ryan" role="button">Comprar</a></p>
+            </div>
+        </div>
+        <div class="cursos__columna">
+            <img src="{%static 'images/im8.jpg'%}" alt="" class="cursos__img">
+            <div class="cursos__descripcion">
+                <h3 class="cursos_titulo">Polerones</h3>
+                <p class="cursos__txt">Tallas: S, M, L, XL, XXL || Precios desde 6.990$</p>
+                <p><a href="#" class="btn btn-primary" role="button">Ver</a> 
+                    <a href="#" class="btn btn-default producto" precio="13" titulo="Jackie & Ryan" role="button">Comprar</a></p>
+            </div>
+        </div>
+</section>
+</main>  
+
+<section>
+            <p>ven y encuentra <em>los mejores precios</em> de la temporada </p>
+
+            <div>
+                <p>Catalogos disponibles</p>
+                <ul>
+                  <li><strong>Catalogos:</strong> {{ num_catalogo }}</li>
+                </ul>
+            </div>
+        </section>
+
+                <footer>
+                    <div class="social">
+                       <a href="" class="icon-facebook"></a>
+                       <a href="" class="icon-twitter"></a>
+                       <a href="" class="icon-gplus"></a>
+                    </div>
+                    <p class="copy">&copy; Tienda De Ropa 2019 - Todos los derechos reservados. </p>
+                </footer>
+  </body>
+</html>
+
+{% endblock %}
