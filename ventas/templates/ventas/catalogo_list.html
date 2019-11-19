@@ -7,7 +7,11 @@
 
       {% for catalogo in catalogo_list %}
       <li>
-        <a href="{{ Catalogo.get_absolute_url }}">{{ catalogo.title }}</a>
+        <a href="{{ catalogo.get_absolute_url }}">{{ catalogo.title }}</a>
+        <a href="/catalogo-delete/{{ id_catalogo }}" 
+          onClick="return confirm('¿Seguro que quieres borrar a {{catalogo.title}}?');">
+            Borrar
+        </a>
       </li>
       {% endfor %}
 
